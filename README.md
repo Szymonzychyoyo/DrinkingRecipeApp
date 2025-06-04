@@ -14,7 +14,7 @@ Aplikacja webowa do tworzenia, edytowania i udostępniania przepisów na drinki.
 
 ## 🚀 Jak uruchomić projekt lokalnie
 
-1. **Klonuj repozytorium:**
+ **Klonuj repozytorium:**
 
 -    git clone https://github.com/Szymonzychyoyo/DrinkingRecipeApp.git
 -    cd .\DrinkingRecipeApp\
