@@ -13,21 +13,20 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 # Set working directory
 WORKDIR /var/www
 
+# Copy application code
 COPY . .
 
+# Install PHP dependencies
 RUN composer install --no-interaction --prefer-dist --optimize-autoloader
-
-# Copy the rest of the application code
-
 
 # Build frontend assets
 RUN npm ci && npm run build
 
-# Generate Laravel application key (only if none exists yet)
-RUN if [ ! -f .env ]; then cp .env.example .env; fi && \
-    if ! grep -q '^APP_KEY=' .env || grep -q '^APP_KEY=$' .env; then \
-        php artisan key:generate --ansi; \
-    fi
+# Copy .env and generate APP_KEY
+RUN cp .env.example .env && php artisan key:generate --ansi
+
+# (Optional) Run migrations (can be removed in production)
+# RUN php artisan migrate --force || true
 
 # Expose port and start the development server
 EXPOSE 8000
