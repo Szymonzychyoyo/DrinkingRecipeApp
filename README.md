@@ -43,3 +43,5 @@ Zrzuty ekranu aplikacji:
 ![img_alt](https://github.com/Szymonzychyoyo/DrinkingRecipeApp/blob/9540a8aa84a173d969de54a0034e2a3bfaa0db0a/public/sceenshots/Dashboard.png)
 
 ![img_alt](https://github.com/Szymonzychyoyo/DrinkingRecipeApp/blob/bde650b08cfabb2c7055e0bb6a8f663f0fb9622f/public/sceenshots/Przepisy%20spo%C5%82eczno%C5%9Bci.png)
+
+![img_alt](https://github.com/Szymonzychyoyo/DrinkingRecipeApp/blob/c7afbad9c51073d5c00e4a4eda3234323e1a9643/public/sceenshots/Dane.png)
