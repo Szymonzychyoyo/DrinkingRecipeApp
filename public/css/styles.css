@@ -1,0 +1,177 @@
+/* Ogólne stylowanie tła i ciała strony */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('/images/background.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center; /* Wyśrodkowanie elementów w pionie */
+    align-items: center; /* Wyśrodkowanie elementów w poziomie */
+}
+
+/* Kontener główny */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Nagłówek */
+header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #fbbf24;
+    margin: 0;
+}
+
+/* Główna sekcja */
+main {
+    width: 100%;
+    max-width: 400px; /* Maksymalna szerokość formularzy */
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Formularze */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+textarea {
+    width: 90%; /* Zmniejszenie szerokości pól tekstowych */
+    max-width: 320px; /* Pola są teraz krótsze */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0 auto; /* Wyśrodkowanie pól */
+}
+
+/* Przycisk główny */
+.primary-button {
+    background-color: #6a0dad;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    width: 100%; /* Przycisk na pełną szerokość kontenera */
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.primary-button:hover {
+    background-color: #8a2be2;
+}
+
+/* Linki dodatkowe */
+.secondary-link {
+    color: #fbbf24;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.secondary-link:hover {
+    color: #ffcc33;
+}
+
+.secondary-button {
+    color: #ffffff;
+    background-color: #333333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.secondary-button:hover {
+    background-color: #555555;
+}
+
+/* Akcje w formularzach */
+.form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center; /* Wyśrodkowanie przycisków */
+}
+
+.forgot-password {
+    font-size: 14px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Alerty */
+.alert {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.alert.success {
+    background-color: #4caf50;
+    color: #ffffff;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    main {
+        width: 90%;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"],
+    .primary-button,
+    .secondary-button {
+        width: 100%;
+    }
+}

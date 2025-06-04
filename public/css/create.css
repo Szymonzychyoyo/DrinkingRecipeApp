@@ -1,0 +1,138 @@
+/* Ogólne stylowanie ciała i tła strony */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('/images/background.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Nagłówek strony */
+h1 {
+    font-size: 36px;
+    color: #fbbf24;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Kontener formularza */
+form {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center; /* Wyśrodkowanie elementów w formularzu */
+}
+
+/* Stylowanie pól formularza */
+form label {
+    font-size: 16px;
+    color: #fbbf24;
+    margin-bottom: 5px;
+    align-self: flex-start; /* Dopasowanie etykiety do lewej */
+}
+
+form input,
+form textarea {
+    width: 80%; /* Skrócenie szerokości pól tekstowych */
+    max-width: 500px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+form textarea {
+    resize: none;
+    height: 100px;
+}
+
+/* Przycisk dodawania */
+form button {
+    background-color: #6a0dad;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    align-self: center;
+    width: 50%;
+    text-align: center;
+}
+
+form button:hover {
+    background-color: #8a2be2;
+}
+
+/* Przycisk anulowania */
+form a {
+    text-align: center;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff4444;
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    align-self: center;
+    width: 50%;
+}
+
+form a:hover {
+    background-color: #ff0000;
+}
+
+/* Wyświetlanie błędów walidacji */
+.alert {
+    background-color: rgba(255, 0, 0, 0.8);
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+    width: 90%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.alert ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.alert li {
+    margin: 5px 0;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    form {
+        width: 100%;
+    }
+
+    form input,
+    form textarea {
+        width: 100%; /* Na mniejszych ekranach pola zajmują pełną szerokość */
+    }
+
+    form button,
+    form a {
+        width: 100%; /* Przycisk zajmuje pełną szerokość na małych ekranach */
+    }
+}

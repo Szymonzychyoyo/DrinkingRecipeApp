@@ -1,0 +1,181 @@
+/* Ogólne stylowanie tła i ciała strony */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('/images/background.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: flex-start; /* Wyświetlanie od góry */
+}
+
+/* Kontener strony */
+.shared-recipes-container {
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+/* Nagłówek */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #fbbf24;
+    margin-bottom: 10px;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6a0dad;
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #8a2be2;
+}
+
+/* Lista przepisów */
+.shared-recipes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.recipe-item {
+    width: 100%;
+    max-width: 400px;
+    background-color: #333333;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.recipe-item img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.recipe-item h3 {
+    font-size: 24px;
+    color: #fbbf24;
+    margin-bottom: 10px;
+}
+
+.recipe-item p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* Komentarze */
+.comments {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: left;
+}
+
+.comment-item {
+    margin-bottom: 10px;
+}
+
+.comment-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.comment-date {
+    font-size: 12px;
+    color: #cccccc;
+    margin-top: 5px;
+}
+
+/* Formularz dodawania komentarza */
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+textarea {
+    width: 100%;
+    max-width: 350px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    resize: none;
+}
+
+.primary-button {
+    padding: 10px 20px;
+    background-color: #6a0dad;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.primary-button:hover {
+    background-color: #8a2be2;
+}
+
+/* Przycisk usunięcia komentarza */
+.delete-button {
+    background-color: #ff4444;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #ff0000;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .shared-recipes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recipe-item {
+        width: 100%;
+    }
+
+    textarea {
+        width: 100%;
+    }
+}

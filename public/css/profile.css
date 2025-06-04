@@ -1,0 +1,163 @@
+/* Ogólne stylowanie ciała i tła strony */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('/images/background.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Kontener główny */
+.profile-container {
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+/* Nagłówek */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #fbbf24;
+    margin-bottom: 10px;
+}
+
+/* Główna sekcja profilu */
+.profile-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Pojedyncza sekcja */
+.profile-section {
+    background-color: #333333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.profile-section h2 {
+    font-size: 24px;
+    color: #fbbf24;
+    margin-bottom: 15px;
+}
+
+.form-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Wyśrodkowanie elementów w sekcji */
+}
+
+/* Formularze */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px; /* Maksymalna szerokość formularzy */
+}
+
+form input,
+form textarea {
+    width: 100%; /* Szerokość pól */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+form textarea {
+    resize: none; /* Wyłączenie możliwości zmiany rozmiaru tekstarea */
+    height: 100px; /* Ustawienie stałej wysokości dla tekstarea */
+}
+
+/* Przycisk "Save" */
+form button {
+    background-color: #6a0dad;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin: 20px auto 0 auto; /* Wyśrodkowanie przycisku */
+}
+
+form button:hover {
+    background-color: #8a2be2;
+}
+
+/* Usunięcie konta */
+.delete-account {
+    border: 2px solid #ff4444;
+    padding: 15px;
+    text-align: center;
+}
+
+.delete-account h2 {
+    color: #ff4444;
+}
+
+.delete-account button {
+    background-color: #ff4444;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-account button:hover {
+    background-color: #ff0000;
+}
+
+/* Przyciski nawigacyjne */
+.navigation-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.primary-button {
+    background-color: #6a0dad;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.primary-button:hover {
+    background-color: #8a2be2;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .profile-container {
+        width: 95%;
+    }
+
+    form {
+        max-width: 100%; /* Formularz zajmuje pełną szerokość na mniejszych ekranach */
+    }
+}
