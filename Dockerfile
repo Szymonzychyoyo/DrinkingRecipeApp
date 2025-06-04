@@ -13,12 +13,12 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 # Set working directory
 WORKDIR /var/www
 
-# Copy composer files & install PHP deps first (better layer caching)
-COPY composer.json composer.lock ./
+COPY . .
+
 RUN composer install --no-interaction --prefer-dist --optimize-autoloader
 
 # Copy the rest of the application code
-COPY . .
+
 
 # Build frontend assets
 RUN npm ci && npm run build
