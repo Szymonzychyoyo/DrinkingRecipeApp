@@ -40,4 +40,4 @@ Aplikacja webowa do tworzenia, edytowania i udostępniania przepisów na drinki.
 
 Zrzuty ekranu aplikacji:
 
-![Zrzut ekranu1](public/screenshots/Dashboard.png)
+![Zrzut ekranu1](public/screenshots/dashboard.png)
