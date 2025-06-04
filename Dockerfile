@@ -25,6 +25,8 @@ RUN npm ci && npm run build
 # Copy .env and generate APP_KEY
 RUN cp .env.example .env && php artisan key:generate --ansi
 
+RUN touch database/database.sqlite
+
 # (Optional) Run migrations (can be removed in production)
 # RUN php artisan migrate --force || true
 
