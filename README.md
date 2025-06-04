@@ -17,7 +17,7 @@ Aplikacja webowa do tworzenia, edytowania i udostępniania przepisów na drinki.
 1. **Klonuj repozytorium:**
 
 -    git clone https://github.com/Szymonzychyoyo/DrinkingRecipeApp.git
--   cd drink-recipes-app
+-    cd .\DrinkingRecipeApp\
 -    composer install
 -    npm install && npm run build
 -    cp .env.example .env
