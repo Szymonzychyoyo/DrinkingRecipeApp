@@ -16,7 +16,7 @@ RUN npm run build
 # Stage 3: runtime image
 FROM php:8.2-cli
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends libpng-dev zip unzip git sqlite3 \
+    && apt-get install -y --no-install-recommends libpng-dev zip unzip git sqlite3 libsqlite3-dev \
     && docker-php-ext-install pdo pdo_sqlite gd \
     && rm -rf /var/lib/apt/lists/*
 WORKDIR /app
