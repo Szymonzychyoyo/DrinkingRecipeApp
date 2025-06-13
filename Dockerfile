@@ -2,7 +2,7 @@
 FROM composer:2 AS composer
 WORKDIR /app
 COPY composer.json composer.lock ./
-RUN composer install --no-dev --prefer-dist --no-interaction
+RUN composer install --no-dev --prefer-dist --no-interaction --no-scripts
 
 # Stage 2: frontend build
 FROM node:18 AS node
