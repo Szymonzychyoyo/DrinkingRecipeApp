@@ -29,6 +29,7 @@ Aplikacja webowa do tworzenia, edytowania i udostępniania przepisów na drinki.
 
     Otwórz w przeglądarce http://localhost:8000
 
+
     ✅ Rejestracja i logowanie użytkowników, zmiana danych oraz usunięcie konta
 
     📸 Dodawanie i edytowanie przepisów z opcjonalnym zdjęciem
