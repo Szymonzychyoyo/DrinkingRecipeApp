@@ -68,9 +68,15 @@ Zrzuty ekranu aplikacji:
 
 Kody do instalacji rozszerzeń:
 sudo apt update
+
 sudo apt install -y php php-cli php-mbstring php-xml php-sqlite3
+
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+
 php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+
 php -r "unlink('composer-setup.php');"
+
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+
 sudo apt install -y nodejs
