@@ -23,5 +23,17 @@ WORKDIR /app
 COPY . .
 COPY --from=composer /app/vendor /app/vendor
 COPY --from=node /app/public/build /app/public/build
+RUN cp .env.example .env \
+    && mkdir -p storage/app/public \
+        storage/framework/cache/data \
+        storage/framework/sessions \
+        storage/framework/testing \
+        storage/framework/views \
+        storage/logs \
+        bootstrap/cache \
+    && php artisan key:generate --force \
+    && touch database/database.sqlite \
+    && php artisan migrate --force \
+    && php artisan storage:link --force
 EXPOSE 8000
 CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
