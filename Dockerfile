@@ -36,4 +36,4 @@ RUN cp .env.example .env \
     && php artisan migrate --force \
     && php artisan storage:link --force
 EXPOSE 8000
-CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
+CMD sh -c 'php artisan serve --host=0.0.0.0 --port=8000 & echo "Application running at: http://localhost:8000" && wait'
